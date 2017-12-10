@@ -10,22 +10,6 @@ int main() {
 	memset(data, 0, DATA_SIZE);
 	data[1] = 0xaa;
 
-    /*
-	HANDLE hDataFile = CreateFile("DataFile.bin",
-			GENERIC_READ | GENERIC_WRITE,
-			0,
-			(LPSECURITY_ATTRIBUTES) NULL,
-			CREATE_NEW | OPEN_EXISTING,
-			FILE_ATTRIBUTE_NORMAL,
-			(HANDLE) NULL);
-	if (hDataFile != INVALID_HANDLE_VALUE) {
-		std::cout << "Valid handle." << std::endl;
-        CloseHandle(hDataFile);
-	} else {
-		std::cout << "Invalid handle." << std::endl;
-	}
-    */
-
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
     if (!dataFile) {
