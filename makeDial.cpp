@@ -52,7 +52,7 @@ int main() {
     if (!dataFile) {
         std::cout << "Error - stream was not opened" << std::endl;
     } else {
-        std::cout << data[1];
+        std::cout << "Done.";
         dataFile.write((const char *)data, DATA_SIZE);
     }
 
