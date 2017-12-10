@@ -11,7 +11,7 @@
 #define DATA_SIZE (ENTRY_SIZE * ENTRY_NUM)
 
 int main() {
-	char data[DATA_SIZE];
+    uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
 
     std::string dfName = "DataFile.bin";
@@ -20,7 +20,7 @@ int main() {
         std::cout << "Error - stream was not opened" << std::endl;
     } else {
         std::cout << data[1];
-        dataFile.write(data, DATA_SIZE);
+        dataFile.write((const char *)data, DATA_SIZE);
     }
 
 
