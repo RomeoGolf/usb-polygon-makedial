@@ -3,7 +3,12 @@
 #include <fstream>
 #include <windows.h>
 
-#define DATA_SIZE 16
+#define PRE_SIZE 4
+#define POST_SIZE 2
+#define LINE_SIZE (PRE_SIZE + (19 * 2))
+#define ENTRY_SIZE ((LINE_SIZE * 3) + POST_SIZE)
+#define ENTRY_NUM 20
+#define DATA_SIZE (ENTRY_SIZE * ENTRY_NUM)
 
 int main() {
 	char data[DATA_SIZE];
