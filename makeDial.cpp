@@ -38,6 +38,13 @@ void addStopper(uint8_t * data, int entry) {
     data[index] = 0x03;
 }
 
+void setDot(uint8_t * data, int x, int y, int entry) {
+    int line = y / 8;
+    int mask = 1 << (y % 8);
+    int pos = (entry * ENTRY_SIZE) + (line * LINE_SIZE) + PRE_SIZE + (x * 2) + 1;
+    data[pos] |= mask;
+}
+
 int main() {
     uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
@@ -46,6 +53,10 @@ int main() {
         addCoord(data, i);
         addStopper(data, i);
     }
+
+    setDot(data, 2, 3, 0);
+    setDot(data, 2, 1, 0);
+    setDot(data, 0, 0, 0);
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
