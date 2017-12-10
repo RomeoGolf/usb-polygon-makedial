@@ -33,12 +33,18 @@ void addCoord(uint8_t * data, int entry) {
     data[index++] = 0x02;
 }
 
+void addStopper(uint8_t * data, int entry) {
+    int index = (entry * ENTRY_SIZE) + (ENTRY_SIZE - 2);
+    data[index] = 0x03;
+}
+
 int main() {
     uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
 
     for(int i = 0; i < 20; i++) {
         addCoord(data, i);
+        addStopper(data, i);
     }
 
     std::string dfName = "DataFile.bin";
