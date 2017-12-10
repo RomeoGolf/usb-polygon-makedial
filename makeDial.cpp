@@ -6,7 +6,7 @@
 #define DATA_SIZE 16
 
 int main() {
-	char data[16];
+	char data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
 	data[1] = 0xaa;
 
