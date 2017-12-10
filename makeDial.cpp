@@ -45,6 +45,44 @@ void setDot(uint8_t * data, int x, int y, int entry) {
     data[pos] |= mask;
 }
 
+void setCircle(uint8_t * data, int entry){
+    uint8_t dots2_16[5] =      {7, 8, 9, 10, 11};
+    uint8_t dots3_15[4] =      {5, 6, 12, 13};
+    uint8_t dots4_14[2] =      {4, 14};
+    uint8_t dots5_6_12_13[2] = {3, 15};
+    uint8_t dots7_11[2] =      {2, 16};
+
+    for (int i = 0; i < 5; i++) {
+        setDot(data, dots2_16[i], 2, entry);
+        setDot(data, dots2_16[i], 16, entry);
+    }
+
+    for (int i = 0; i < 4; i++) {
+        setDot(data, dots3_15[i], 3, entry);
+        setDot(data, dots3_15[i], 15, entry);
+    }
+
+    for (int i = 0; i < 2; i++) {
+        setDot(data, dots4_14[i], 4, entry);
+        setDot(data, dots4_14[i], 14, entry);
+    }
+
+    for (int i = 0; i < 2; i++) {
+        setDot(data, dots5_6_12_13[i], 5, entry);
+        setDot(data, dots5_6_12_13[i], 6, entry);
+        setDot(data, dots5_6_12_13[i], 12, entry);
+        setDot(data, dots5_6_12_13[i], 13, entry);
+    }
+
+    for (int i = 0; i < 2; i++) {
+        setDot(data, dots7_11[i], 7, entry);
+        setDot(data, dots7_11[i], 8, entry);
+        setDot(data, dots7_11[i], 9, entry);
+        setDot(data, dots7_11[i], 10, entry);
+        setDot(data, dots7_11[i], 11, entry);
+    }
+}
+
 int main() {
     uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
@@ -54,9 +92,7 @@ int main() {
         addStopper(data, i);
     }
 
-    setDot(data, 2, 3, 0);
-    setDot(data, 2, 1, 0);
-    setDot(data, 0, 0, 0);
+    setCircle(data, 0);
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
