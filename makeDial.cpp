@@ -83,6 +83,40 @@ void setCircle(uint8_t * data, int entry){
     }
 }
 
+void setDigit(uint8_t * data, int pos, int digit, int entry) {
+    int shiftY = 6;
+    int shiftX = 10;
+    if (pos != 0) {
+        shiftX = 5;
+    }
+
+    switch(digit) {
+        case 1:
+            setDot(data, 2 + shiftX, 0 + shiftY, entry);
+            break;
+        case 2:
+            setDot(data, 1 + shiftX, 0 + shiftY, entry);
+            break;
+        default:
+            setDot(data, 1 + shiftX, 0 + shiftY, entry);
+            setDot(data, 2 + shiftX, 0 + shiftY, entry);
+            setDot(data, 0 + shiftX, 1 + shiftY, entry);
+            setDot(data, 3 + shiftX, 1 + shiftY, entry);
+            setDot(data, 0 + shiftX, 2 + shiftY, entry);
+            setDot(data, 3 + shiftX, 2 + shiftY, entry);
+            setDot(data, 0 + shiftX, 3 + shiftY, entry);
+            setDot(data, 3 + shiftX, 3 + shiftY, entry);
+            setDot(data, 0 + shiftX, 4 + shiftY, entry);
+            setDot(data, 3 + shiftX, 4 + shiftY, entry);
+            setDot(data, 0 + shiftX, 5 + shiftY, entry);
+            setDot(data, 3 + shiftX, 5 + shiftY, entry);
+            setDot(data, 1 + shiftX, 6 + shiftY, entry);
+            setDot(data, 2 + shiftX, 6 + shiftY, entry);
+            setDot(data, 2 + shiftX, 2 + shiftY, entry);
+            setDot(data, 1 + shiftX, 3 + shiftY, entry);
+    }
+}
+
 int main() {
     uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
@@ -93,6 +127,8 @@ int main() {
     }
 
     setCircle(data, 0);
+    setDigit(data, 0, 0, 0);
+    setDigit(data, 1, 0, 0);
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
