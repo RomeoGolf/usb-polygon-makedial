@@ -42,7 +42,7 @@ int main() {
     uint8_t data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
 
-    for(int i = 0; i < 20; i++) {
+    for(int i = 0; i < ENTRY_NUM; i++) {
         addCoord(data, i);
         addStopper(data, i);
     }
