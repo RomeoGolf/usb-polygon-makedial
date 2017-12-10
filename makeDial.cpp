@@ -13,7 +13,6 @@
 int main() {
 	char data[DATA_SIZE];
 	memset(data, 0, DATA_SIZE);
-	data[1] = 0xaa;
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
