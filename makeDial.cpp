@@ -251,11 +251,10 @@ int main() {
     for(int i = 0; i < ENTRY_NUM; i++) {
         addCoord(data, i);
         addStopper(data, i);
+        setCircle(data, i);
+        setDigit(data, (i / 10), (i % 10), i);
     }
 
-    setCircle(data, 0);
-    setDigit(data, 0, 0, 0);
-    setDigit(data, 1, 0, 0);
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
