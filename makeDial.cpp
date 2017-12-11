@@ -255,6 +255,87 @@ int main() {
         setDigit(data, (i / 10), (i % 10), i);
     }
 
+    // Needles:
+    // 0
+    setDot(data, 9, 0, 0);
+    setDot(data, 9, 1, 0);
+    setDot(data, 9, 3, 0);
+    // 1
+    setDot(data, 12, 0, 1);
+    setDot(data, 12, 1, 1);
+    setDot(data, 11, 3, 1);
+    // 2
+    setDot(data, 15, 1, 2);
+    setDot(data, 14, 2, 2);
+    setDot(data, 13, 4, 2);
+    // 3
+    setDot(data, 14, 6, 3);
+    setDot(data, 16, 4, 3);
+    setDot(data, 17, 3, 3);
+    // 4
+    setDot(data, 15, 7, 4);
+    setDot(data, 17, 6, 4);
+    setDot(data, 18, 6, 4);
+    // 5
+    setDot(data, 15, 9, 5);
+    setDot(data, 17, 9, 5);
+    setDot(data, 18, 9, 5);
+    // 6
+    setDot(data, 15, 11, 6);
+    setDot(data, 17, 12, 6);
+    setDot(data, 18, 12, 6);
+    // 7
+    setDot(data, 15, 12, 7);
+    setDot(data, 17, 14, 7);
+    setDot(data, 18, 15, 7);
+    // 8
+    setDot(data, 13, 14, 8);
+    setDot(data, 14, 16, 8);
+    setDot(data, 15, 17, 8);
+    // 9
+    setDot(data, 11, 15, 9);
+    setDot(data, 12, 17, 9);
+    setDot(data, 12, 18, 9);
+    // 10
+    setDot(data, 9, 15, 10);
+    setDot(data, 9, 17, 10);
+    setDot(data, 9, 18, 10);
+    // 11
+    setDot(data, 7, 15, 11);
+    setDot(data, 6, 17, 11);
+    setDot(data, 6, 18, 11);
+    // 12
+    setDot(data, 5, 14, 12);
+    setDot(data, 4, 16, 12);
+    setDot(data, 3, 17, 12);
+    // 13
+    setDot(data, 4, 12, 13);
+    setDot(data, 2, 14, 13);
+    setDot(data, 1, 15, 13);
+    // 14
+    setDot(data, 3, 11, 14);
+    setDot(data, 1, 12, 14);
+    setDot(data, 0, 12, 14);
+    // 15
+    setDot(data, 3, 9, 15);
+    setDot(data, 1, 9, 15);
+    setDot(data, 0, 9, 15);
+    // 16
+    setDot(data, 3, 7, 16);
+    setDot(data, 1, 5, 16);
+    setDot(data, 0, 5, 16);
+    // 17
+    setDot(data, 4, 6, 17);
+    setDot(data, 2, 4, 17);
+    setDot(data, 1, 3, 17);
+    // 18
+    setDot(data, 6, 4, 18);
+    setDot(data, 5, 2, 18);
+    setDot(data, 4, 1, 18);
+    // 19
+    setDot(data, 7, 3, 19);
+    setDot(data, 6, 1, 19);
+    setDot(data, 6, 0, 19);
 
     std::string dfName = "DataFile.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
