@@ -7,7 +7,7 @@
 #define POST_SIZE 2
 #define LINE_SIZE (PRE_SIZE + (19 * 2))
 #define ENTRY_SIZE ((LINE_SIZE * 3) + POST_SIZE)
-#define ENTRY_NUM 20
+#define ENTRY_NUM 18
 #define DATA_SIZE (ENTRY_SIZE * ENTRY_NUM)
 
 void addCoord(uint8_t * data, int entry) {
@@ -266,79 +266,71 @@ int main() {
     setDot(data, 12, 1, 1);
     setDot(data, 11, 3, 1);
     // 2
-    setDot(data, 15, 1, 2);
-    setDot(data, 14, 2, 2);
+    setDot(data, 15, 2, 2);
+    setDot(data, 14, 3, 2);
     setDot(data, 13, 4, 2);
     // 3
     setDot(data, 14, 6, 3);
-    setDot(data, 16, 4, 3);
-    setDot(data, 17, 3, 3);
+    setDot(data, 16, 5, 3);
+    setDot(data, 17, 4, 3);
     // 4
-    setDot(data, 15, 7, 4);
-    setDot(data, 17, 6, 4);
-    setDot(data, 18, 6, 4);
+    setDot(data, 15, 8, 4);
+    setDot(data, 17, 8, 4);
+    setDot(data, 18, 7, 4);
     // 5
-    setDot(data, 15, 9, 5);
-    setDot(data, 17, 9, 5);
-    setDot(data, 18, 9, 5);
+    setDot(data, 15, 10, 5);
+    setDot(data, 17, 10, 5);
+    setDot(data, 18, 11, 5);
     // 6
-    setDot(data, 15, 11, 6);
-    setDot(data, 17, 12, 6);
-    setDot(data, 18, 12, 6);
+    setDot(data, 14, 12, 6);
+    setDot(data, 16, 13, 6);
+    setDot(data, 17, 14, 6);
     // 7
-    setDot(data, 14, 12, 7);
-    setDot(data, 16, 14, 7);
-    setDot(data, 17, 15, 7);
+    setDot(data, 13, 14, 7);
+    setDot(data, 14, 15, 7);
+    setDot(data, 15, 16, 7);
     // 8
-    setDot(data, 13, 14, 8);
-    setDot(data, 14, 16, 8);
-    setDot(data, 15, 17, 8);
+    setDot(data, 11, 15, 8);
+    setDot(data, 12, 17, 8);
+    setDot(data, 12, 18, 8);
     // 9
-    setDot(data, 11, 15, 9);
-    setDot(data, 12, 17, 9);
-    setDot(data, 12, 18, 9);
+    setDot(data, 9, 15, 9);
+    setDot(data, 9, 17, 9);
+    setDot(data, 9, 18, 9);
     // 10
-    setDot(data, 9, 15, 10);
-    setDot(data, 9, 17, 10);
-    setDot(data, 9, 18, 10);
+    setDot(data, 7, 15, 10);
+    setDot(data, 6, 17, 10);
+    setDot(data, 6, 18, 10);
     // 11
-    setDot(data, 7, 15, 11);
-    setDot(data, 6, 17, 11);
-    setDot(data, 6, 18, 11);
+    setDot(data, 3, 16, 11);
+    setDot(data, 5, 15, 11);
+    setDot(data, 5, 14, 11);
     // 12
-    setDot(data, 5, 14, 12);
-    setDot(data, 4, 16, 12);
-    setDot(data, 3, 17, 12);
+    setDot(data, 1, 14, 12);
+    setDot(data, 2, 13, 12);
+    setDot(data, 4, 12, 12);
     // 13
-    setDot(data, 4, 12, 13);
-    setDot(data, 2, 14, 13);
-    setDot(data, 1, 15, 13);
+    setDot(data, 0, 11, 13);
+    setDot(data, 1, 10, 13);
+    setDot(data, 3, 10, 13);
     // 14
-    setDot(data, 3, 11, 14);
-    setDot(data, 1, 12, 14);
-    setDot(data, 0, 12, 14);
+    setDot(data, 3, 8, 14);
+    setDot(data, 1, 8, 14);
+    setDot(data, 0, 7, 14);
     // 15
-    setDot(data, 3, 9, 15);
-    setDot(data, 1, 9, 15);
-    setDot(data, 0, 9, 15);
+    setDot(data, 1, 4, 15);
+    setDot(data, 2, 5, 15);
+    setDot(data, 4, 6, 15);
     // 16
-    setDot(data, 3, 7, 16);
-    setDot(data, 1, 6, 16);
-    setDot(data, 0, 6, 16);
+    setDot(data, 3, 2, 16);
+    setDot(data, 4, 3, 16);
+    setDot(data, 5, 4, 16);
     // 17
-    setDot(data, 4, 6, 17);
-    setDot(data, 2, 4, 17);
-    setDot(data, 1, 3, 17);
-    // 18
-    setDot(data, 6, 4, 18);
-    setDot(data, 5, 2, 18);
-    setDot(data, 4, 1, 18);
-    // 19
-    setDot(data, 7, 3, 19);
-    setDot(data, 6, 1, 19);
-    setDot(data, 6, 0, 19);
+    setDot(data, 6, 0, 17);
+    setDot(data, 6, 1, 17);
+    setDot(data, 7, 3, 17);
 
-    std::string dfName = "DataFile.bin";
+    std::string dfName = "DataFile-18.bin";
     std::ofstream dataFile {dfName, std::ios::binary | std::ios::trunc};
     if (!dataFile) {
         std::cout << "Error - stream was not opened" << std::endl;
